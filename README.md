@@ -69,8 +69,10 @@ Playwright MCP は既存の Chrome プロファイルを再利用して reCAPTCH
 ```
 FormPilot/
 ├── setup.sh                  # セットアップスクリプト（冪等）
-├── SKILL.md                  # スキル定義（Claude Code が読み込む）
+├── SKILL.md                  # スキル定義・全体フロー（司令塔）
 ├── docs/
+│   ├── form-steps.md         # Step 5-12: フォーム入力・送信ステップ
+│   ├── batch-lifecycle.md    # Step 1-4, 13-19: バッチ初期化・後処理
 │   ├── progress.json         # 前回の続きから再開するための進捗記録
 │   ├── error-log.json        # セッション横断の失敗履歴
 │   └── error-rules.json      # 3回以上失敗した企業の自動スキップルール
