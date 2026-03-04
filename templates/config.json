@@ -1,0 +1,35 @@
+{
+  "spreadsheet": {
+    "url": "<YOUR_GOOGLE_SPREADSHEET_URL>",
+    "columns": {
+      "companyName": "A",
+      "submitted": "B",
+      "formUrl": "C"
+    },
+    "sheet": "シート1"
+  },
+  "commonData": {
+    "会社名": "<YOUR_COMPANY_NAME>",
+    "会社フリガナ": "<YOUR_COMPANY_NAME_KANA>",
+    "部署名": "",
+    "役職": "",
+    "氏名": "<YOUR_NAME>",
+    "姓": "<YOUR_LAST_NAME>",
+    "名": "<YOUR_FIRST_NAME>",
+    "フリガナ（カタカナ）": "<YOUR_NAME_KANA_KATAKANA>",
+    "フリガナ（ひらがな）": "<YOUR_NAME_KANA_HIRAGANA>",
+    "メールアドレス": "<YOUR_EMAIL>",
+    "担当者メールアドレス": "<YOUR_EMAIL>",
+    "電話番号": "<YOUR_PHONE>",
+    "住所": "",
+    "URL": "",
+    "お問い合わせ種別": "SESパートナーのご提案",
+    "お問い合わせ内容": "<YOUR_MESSAGE>"
+  },
+  "options": {
+    "confirmBeforeSubmit": true,
+    "screenshotAfterSubmit": true,
+    "skipOnError": true,
+    "maxCompanies": 150
+  }
+}

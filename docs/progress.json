@@ -1,5 +1,9 @@
 {
-  "lastRow": 1013,
-  "lastCompany": "JYJサンブリッジ株式会社",
-  "updatedAt": "2026-03-04T23:10:00+09:00"
+  "lastRow": 1015,
+  "lastCompany": "MTCジャパン",
+  "updatedAt": "2026-03-05T00:53:00+09:00",
+  "results": [
+    { "row": 1014, "company": "ユークリエイション株式会社", "status": "failed", "retries": 0, "error": "ドメイン期限切れ（you-c.com has expired）" },
+    { "row": 1015, "company": "MTCジャパン", "status": "success", "retries": 0 }
+  ]
 }

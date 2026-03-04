@@ -163,43 +163,7 @@ create_config_json() {
     return
   fi
 
-  cat > "${config_path}" <<'EOF'
-{
-  "spreadsheet": {
-    "url": "<YOUR_GOOGLE_SPREADSHEET_URL>",
-    "columns": {
-      "companyName": "A",
-      "submitted": "B",
-      "formUrl": "C"
-    },
-    "sheet": "シート1"
-  },
-  "commonData": {
-    "会社名": "<YOUR_COMPANY_NAME>",
-    "会社フリガナ": "<YOUR_COMPANY_NAME_KANA>",
-    "部署名": "",
-    "役職": "",
-    "氏名": "<YOUR_NAME>",
-    "姓": "<YOUR_LAST_NAME>",
-    "名": "<YOUR_FIRST_NAME>",
-    "フリガナ（カタカナ）": "<YOUR_NAME_KANA_KATAKANA>",
-    "フリガナ（ひらがな）": "<YOUR_NAME_KANA_HIRAGANA>",
-    "メールアドレス": "<YOUR_EMAIL>",
-    "担当者メールアドレス": "<YOUR_EMAIL>",
-    "電話番号": "<YOUR_PHONE>",
-    "住所": "",
-    "URL": "",
-    "お問い合わせ種別": "SESパートナーのご提案",
-    "お問い合わせ内容": "<YOUR_MESSAGE>"
-  },
-  "options": {
-    "confirmBeforeSubmit": true,
-    "screenshotAfterSubmit": true,
-    "skipOnError": true,
-    "maxCompanies": 150
-  }
-}
-EOF
+  cp "$(get_repo_root)/templates/config.json" "${config_path}"
 
   print_success "config.json を生成しました: ${config_path}"
   print_info "次のステップで各フィールドを編集してください。"
@@ -318,38 +282,8 @@ print_completion() {
   printf "${COLOR_BOLD} セットアップ完了！${COLOR_RESET}\n"
   printf "${COLOR_BOLD}==============================${COLOR_RESET}\n"
 
-  cat <<'USAGE'
-
-【次のステップ】
-  1. config.json を編集してください:
-     ~/.claude/form-submit/config.json
-
-     必須項目:
-       - spreadsheet.url    : Google スプレッドシートのURL
-       - commonData.会社名  : あなたの会社名
-       - commonData.氏名    : あなたの氏名
-       - commonData.メールアドレス : メールアドレス
-       - commonData.電話番号 : 電話番号
-       - commonData.お問い合わせ内容 : 送信メッセージ
-
-  2. Google Chrome を完全に閉じてください
-     （Playwright MCP と Chrome が同じプロファイルを共有するため）
-
-【使い方】
-  /form-submit                       未送信企業を一括処理（最大150社）
-  /form-submit --max 30              最大30社まで処理
-  /form-submit --company 企業名      特定企業のみ処理
-
-【設定ファイル】
-  ~/.claude/form-submit/config.json         送信データ設定
-  ~/.claude/form-submit/field-log.json      未知フィールド学習データ
-  company/                        企業別の送信データ（プロジェクトルート）
-
-【詳細】
-  references/config-schema.md              設定スキーマ
-  references/config-schema.example.md      設定例
-  README.md                                 プロジェクト説明
-USAGE
+  echo ""
+  cat "$(get_repo_root)/templates/usage.txt"
 }
 
 # -----------------------------------------------------------------------------

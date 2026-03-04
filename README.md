@@ -46,7 +46,7 @@ bash setup.sh
 
 セットアップ完了後、`~/.claude/form-submit/config.json` を編集して自分の情報を入力する。送信データは `company/`（プロジェクトルート）に企業別で保存される。
 
-スキーマの詳細と設定例は [`references/config-schema.example.md`](references/config-schema.example.md) を参照。
+スキーマの詳細は [`references/config-schema.md`](references/config-schema.md)、設定例は [`references/config-schema.example.md`](references/config-schema.example.md) を参照。
 
 ### Chrome を閉じてからスキルを実行
 
@@ -76,9 +76,12 @@ FormPilot/
 │   ├── progress.json         # 前回の続きから再開するための進捗記録
 │   ├── error-log.json        # セッション横断の失敗履歴
 │   └── error-rules.json      # 3回以上失敗した企業の自動スキップルール
+├── templates/
+│   ├── config.json           # config.json のテンプレート（setup.sh が使用）
+│   └── usage.txt             # セットアップ完了時の案内テキスト
 └── references/
     ├── config-schema.md      # 設定ファイルのスキーマリファレンス
-    └── config-schema.example.md  # 設定例
+    └── config-schema.example.md  # サンプルデータ・設定例
 ```
 
 実行時に使用する設定ファイルは `~/.claude/form-submit/` に配置する（リポジトリ外）。

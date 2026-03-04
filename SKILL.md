@@ -105,4 +105,5 @@ bot 検出を回避するため、フォーム入力開始前に `browser_run_co
 
 ## 参考リソース
 
-- [設定ファイル スキーマリファレンス](references/config-schema.md) — config.json / field-log.json / error-log.json / error-rules.json の詳細なフィールド定義・設定例
+- [設定ファイル スキーマリファレンス](references/config-schema.md) — config.json / field-log.json / error-log.json / error-rules.json の詳細なフィールド定義
+- [設定ファイル サンプル・設定例](references/config-schema.example.md) — サンプルデータと最小構成・フル構成の設定例
