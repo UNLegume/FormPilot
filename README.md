@@ -90,9 +90,10 @@ FormPilot/
 └── field-log.json            # 未知フィールドの回答ログ（自動作成）
 
 company/                        # 企業別の送信データ（プロジェクトルート、git管理外）
-└── {企業名}/
-    ├── before.json           # 送信前の入力内容（JSON）
-    └── after.png             # 送信後のスクリーンショット
+└── YYYY-MM-DD/
+    └── {企業名}/
+        ├── before.json           # 送信前の入力内容（JSON）
+        └── after.png             # 送信後のスクリーンショット
 ```
 
 ---

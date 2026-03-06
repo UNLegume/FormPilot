@@ -21,7 +21,7 @@
 【設定ファイル】
   ~/.claude/form-submit/config.json         送信データ設定
   ~/.claude/form-submit/field-log.json      未知フィールド学習データ
-  company/                        企業別の送信データ（プロジェクトルート）
+  company/YYYY-MM-DD/            日付別の企業送信データ（プロジェクトルート）
 
 【詳細】
   references/config-schema.md              設定スキーマ

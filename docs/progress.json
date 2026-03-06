@@ -1,17 +1,14 @@
 {
-  "lastRow": 1042,
-  "lastCompany": "株式会社パシフィックシステム",
-  "updatedAt": "2026-03-06T18:25:00+09:00",
+  "lastRow": 1049,
+  "lastCompany": "株式会社ホロンシステム",
+  "updatedAt": "2026-03-06T21:00:00+09:00",
   "results": [
-    { "row": 1033, "company": "株式会社ドリームジャック", "status": "success", "retries": 0 },
-    { "row": 1034, "company": "株式会社ジーンリバティー", "status": "success", "retries": 0 },
-    { "row": 1035, "company": "株式会社ウェム", "status": "success", "retries": 0 },
-    { "row": 1036, "company": "株式会社トライネット", "status": "success", "retries": 0 },
-    { "row": 1037, "company": "株式会社ヒューマンソリューションズ", "status": "success", "retries": 0 },
-    { "row": 1038, "company": "株式会社フォーエス", "status": "success", "retries": 0 },
-    { "row": 1039, "company": "株式会社コージーネット", "status": "skip", "reason": "フォーム未検出" },
-    { "row": 1040, "company": "株式会社エムコスミック", "status": "success", "retries": 0 },
-    { "row": 1041, "company": "株式会社ピーアンドアイ", "status": "success", "retries": 0 },
-    { "row": 1042, "company": "株式会社パシフィックシステム", "status": "success", "retries": 0 }
+    { "row": 1043, "company": "株式会社ブレンジ", "status": "success", "retries": 0 },
+    { "row": 1044, "company": "シーサーNet株式会社", "status": "skip", "reason": "フォーム未検出: メール/電話のみ" },
+    { "row": 1045, "company": "株式会社ホクシンシステム", "status": "success", "retries": 0 },
+    { "row": 1046, "company": "株式会社横浜マリンシステム", "status": "skip", "reason": "フォーム未検出: フォーム壊れ/メールのみ" },
+    { "row": 1047, "company": "JICOO株式会社", "status": "success", "retries": 0 },
+    { "row": 1048, "company": "株式会社ドリームキャリア", "status": "success", "retries": 0 },
+    { "row": 1049, "company": "株式会社ホロンシステム", "status": "success", "retries": 0 }
   ]
 }

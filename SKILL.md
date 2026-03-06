@@ -159,7 +159,7 @@ commonData のキーとフォームのフィールドラベルを **意味的に
 
 ### Step 10: 送信前データ保存
 
-**⚠ `browser_take_screenshot` は使用しない。** Write で `company/{企業名}/before.json` に保存（`/` 等は `_` に置換）。内容: `{ "company", "url", "submittedAt", "fields": { フィールド名: 値, ... } }`
+**⚠ `browser_take_screenshot` は使用しない。** Write で `company/{YYYY-MM-DD}/{企業名}/before.json` に保存（`/` 等は `_` に置換）。内容: `{ "company", "url", "submittedAt", "fields": { フィールド名: 値, ... } }`
 
 `config.options.confirmBeforeSubmit` が `true` の場合、`AskUserQuestion` で「{企業名} のフォームを送信しますか？」と確認。
 
@@ -170,7 +170,7 @@ commonData のキーとフォームのフィールドラベルを **意味的に
 1. 送信ボタン（「送信」「Submit」「確認する」「次へ」等）を `browser_click`
 2. `browser_run_code` でページ状態を確認（完了: `送信完了|ありがとう|complete|thanks`、確認画面: `確認|confirm`）
 3. **確認画面** → 「送信する」「上記内容で送信」等をクリックし再確認（最大 3 回）
-4. **完了画面** → `screenshotAfterSubmit` が `true` なら以下のルールで `browser_take_screenshot`（保存先: `{企業名}/after.png`）→ 成功として記録
+4. **完了画面** → `screenshotAfterSubmit` が `true` なら以下のルールで `browser_take_screenshot`（保存先: `{YYYY-MM-DD}/{企業名}/after.png`）→ 成功として記録
    - **通常フォーム（完了ページに遷移する場合）**: 完了メッセージが見える位置までスクロールしてからスクリーンショット
    - **iframe内フォーム（Microsoft Forms等）**: iframe要素を `ref` 指定してスクリーンショット（親ページではなくiframe内の完了メッセージを撮る）
    - **サイレントリセット型（Wixフォーム等、送信後にフォームがリセットされる場合）**: 送信成功はネットワークレスポンス（status 200）で確認。after.png は撮らない
@@ -186,7 +186,7 @@ commonData のキーとフォームのフィールドラベルを **意味的に
 
 **3 回失敗時:** エラーリストに追加、`error-log.json` に記録（既存エントリは `count` +1）、次の企業へ（Step 5 に戻る）。
 
-**エラー企業の個別記録:** スキップまたはエラーとなった企業は Write で `company/{企業名}/error.json` に保存する。内容: `{ "company", "url", "status": "skip"|"error", "error": "詳細理由", "errorCategory": "エラー種別", "retriable": true|false, "occurredAt": "ISO8601" }`
+**エラー企業の個別記録:** スキップまたはエラーとなった企業は Write で `company/{YYYY-MM-DD}/{企業名}/error.json` に保存する。内容: `{ "company", "url", "status": "skip"|"error", "error": "詳細理由", "errorCategory": "エラー種別", "retriable": true|false, "occurredAt": "ISO8601" }`
 
 `skipOnError: false` の場合、3 回失敗で新規企業の処理を停止する（ただし **Step 13–19 の後処理は必ず実行する**）。
 
