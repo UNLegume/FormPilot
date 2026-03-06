@@ -186,6 +186,8 @@ commonData のキーとフォームのフィールドラベルを **意味的に
 
 **3 回失敗時:** エラーリストに追加、`error-log.json` に記録（既存エントリは `count` +1）、次の企業へ（Step 5 に戻る）。
 
+**エラー企業の個別記録:** スキップまたはエラーとなった企業は Write で `company/{企業名}/error.json` に保存する。内容: `{ "company", "url", "status": "skip"|"error", "error": "詳細理由", "errorCategory": "エラー種別", "retriable": true|false, "occurredAt": "ISO8601" }`
+
 `skipOnError: false` の場合、3 回失敗で新規企業の処理を停止する（ただし **Step 13–19 の後処理は必ず実行する**）。
 
 **エラー分類早見表:**

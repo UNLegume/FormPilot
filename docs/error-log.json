@@ -6,6 +6,41 @@
       "error": "送信エラー: メッセージの送信に失敗しました（Contact Form 7 サーバーエラー）",
       "count": 1,
       "lastSeen": "2026-03-05T23:15:00+09:00"
+    },
+    {
+      "company": "株式会社ボーダーレスパートナーズ",
+      "url": "https://borderless-partners.co.jp/",
+      "error": "吸収合併済み（株式会社クオリティスタートに統合）",
+      "count": 1,
+      "lastSeen": "2026-03-06T17:01:00+09:00"
+    },
+    {
+      "company": "株式会社オキシス",
+      "url": "https://oxys.co.jp/",
+      "error": "フォーム未検出: メールアドレスのみの連絡先",
+      "count": 1,
+      "lastSeen": "2026-03-06T17:02:00+09:00"
+    },
+    {
+      "company": "株式会社NIS",
+      "url": "https://www.nis-p.com/contact/",
+      "error": "カスタムCAPTCHA: 即スキップ",
+      "count": 1,
+      "lastSeen": "2026-03-06T17:03:00+09:00"
+    },
+    {
+      "company": "株式会社ブライトスフィア",
+      "url": "https://brightsphere.co.jp/",
+      "error": "サイトアクセス不可（SSL/接続エラー）",
+      "count": 1,
+      "lastSeen": "2026-03-06T17:04:00+09:00"
+    },
+    {
+      "company": "株式会社SKYM",
+      "url": "https://skym.co.jp/partnership",
+      "error": "カスタムCAPTCHA: 即スキップ",
+      "count": 1,
+      "lastSeen": "2026-03-06T17:13:00+09:00"
     }
   ]
 }
