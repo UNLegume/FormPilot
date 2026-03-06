@@ -1,17 +1,17 @@
 {
-  "lastRow": 1032,
-  "lastCompany": "株式会社SKYM",
-  "updatedAt": "2026-03-06T17:15:00+09:00",
+  "lastRow": 1042,
+  "lastCompany": "株式会社パシフィックシステム",
+  "updatedAt": "2026-03-06T18:25:00+09:00",
   "results": [
-    { "row": 1023, "company": "トレードログ株式会社", "status": "success", "retries": 0 },
-    { "row": 1024, "company": "株式会社プロフェッショナルバンク", "status": "success", "retries": 0 },
-    { "row": 1025, "company": "MHソリューションズ株式会社", "status": "success", "retries": 0 },
-    { "row": 1026, "company": "株式会社ボーダーレスパートナーズ", "status": "skip", "reason": "吸収合併済み" },
-    { "row": 1027, "company": "株式会社オキシス", "status": "skip", "reason": "フォーム未検出・メールのみ" },
-    { "row": 1028, "company": "株式会社NIS", "status": "skip", "reason": "カスタムCAPTCHA" },
-    { "row": 1029, "company": "株式会社ブライトスフィア", "status": "skip", "reason": "サイトアクセス不可" },
-    { "row": 1030, "company": "株式会社テクノエージェント", "status": "success", "retries": 0 },
-    { "row": 1031, "company": "株式会社WeStyle", "status": "success", "retries": 0 },
-    { "row": 1032, "company": "株式会社SKYM", "status": "skip", "reason": "カスタムCAPTCHA" }
+    { "row": 1033, "company": "株式会社ドリームジャック", "status": "success", "retries": 0 },
+    { "row": 1034, "company": "株式会社ジーンリバティー", "status": "success", "retries": 0 },
+    { "row": 1035, "company": "株式会社ウェム", "status": "success", "retries": 0 },
+    { "row": 1036, "company": "株式会社トライネット", "status": "success", "retries": 0 },
+    { "row": 1037, "company": "株式会社ヒューマンソリューションズ", "status": "success", "retries": 0 },
+    { "row": 1038, "company": "株式会社フォーエス", "status": "success", "retries": 0 },
+    { "row": 1039, "company": "株式会社コージーネット", "status": "skip", "reason": "フォーム未検出" },
+    { "row": 1040, "company": "株式会社エムコスミック", "status": "success", "retries": 0 },
+    { "row": 1041, "company": "株式会社ピーアンドアイ", "status": "success", "retries": 0 },
+    { "row": 1042, "company": "株式会社パシフィックシステム", "status": "success", "retries": 0 }
   ]
 }
