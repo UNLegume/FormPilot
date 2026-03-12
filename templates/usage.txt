@@ -24,6 +24,10 @@
   company/YYYY-MM-DD/            日付別の企業送信データ（プロジェクトルート）
 
 【詳細】
-  references/config-schema.md              設定スキーマ
-  references/config-schema.example.md      設定例
-  README.md                                 プロジェクト説明
+  references/schemas.md                    全 JSON スキーマ定義
+  references/config-examples.md              設定例・業種別カスタマイズ
+  README.md                                プロジェクト説明
+
+【初めての方へ】
+  config.json の編集方法は references/config-examples.md を参照してください。
+  業種別のカスタマイズ例（SES・人材紹介・不動産等）も掲載しています。

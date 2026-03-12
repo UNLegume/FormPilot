@@ -23,13 +23,14 @@
     "電話番号": "<YOUR_PHONE>",
     "住所": "",
     "URL": "",
-    "お問い合わせ種別": "SESパートナーのご提案",
+    "お問い合わせ種別": "<YOUR_INQUIRY_TYPE>",
     "お問い合わせ内容": "<YOUR_MESSAGE>"
   },
   "options": {
     "confirmBeforeSubmit": true,
     "screenshotAfterSubmit": true,
     "skipOnError": true,
-    "maxCompanies": 150
+    "maxCompanies": 150,
+    "formSearchKeywords": ["お問い合わせ", "Contact"]
   }
 }

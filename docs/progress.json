@@ -1,14 +1,8 @@
 {
-  "lastRow": 1049,
-  "lastCompany": "株式会社ホロンシステム",
-  "updatedAt": "2026-03-06T21:00:00+09:00",
+  "lastRow": 11,
+  "lastCompany": "株式会社チオン",
+  "updatedAt": "2026-03-12T20:59:00+09:00",
   "results": [
-    { "row": 1043, "company": "株式会社ブレンジ", "status": "success", "retries": 0 },
-    { "row": 1044, "company": "シーサーNet株式会社", "status": "skip", "reason": "フォーム未検出: メール/電話のみ" },
-    { "row": 1045, "company": "株式会社ホクシンシステム", "status": "success", "retries": 0 },
-    { "row": 1046, "company": "株式会社横浜マリンシステム", "status": "skip", "reason": "フォーム未検出: フォーム壊れ/メールのみ" },
-    { "row": 1047, "company": "JICOO株式会社", "status": "success", "retries": 0 },
-    { "row": 1048, "company": "株式会社ドリームキャリア", "status": "success", "retries": 0 },
-    { "row": 1049, "company": "株式会社ホロンシステム", "status": "success", "retries": 0 }
+    { "row": 11, "company": "株式会社チオン", "status": "success", "retries": 0 }
   ]
 }
