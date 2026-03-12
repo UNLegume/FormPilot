@@ -72,14 +72,15 @@ allowed-tools: >
 
 `$ARGUMENTS` を解析する（`--max {N}` → maxCompanies 上書き、`--company {名}` → 対象限定）。
 
-Read で以下を読み込む：
+Read で `~/.claude/form-submit/config.json` を読み込む。**ファイルが存在しない場合（Read でエラー）は「対話型セットアップ」を実行する（後述）。**
 
-1. `~/.claude/form-submit/config.json` — spreadsheet, options, commonData を取得
-2. `~/.claude/form-submit/field-log.json` — 未知フィールドの過去回答
-3. `${CLAUDE_SKILL_DIR}/docs/progress.json` — 前回の最終処理行
-4. `${CLAUDE_SKILL_DIR}/docs/error-log.json` — 過去の失敗履歴
-5. `${CLAUDE_SKILL_DIR}/docs/error-rules.json` — 自動スキップルール
-6. Playwright MCP 設定ファイルを Read し `--user-data-dir` の有無を確認。未設定なら「reCAPTCHA 通過率が下がりますが続行しますか？」と確認
+config.json 取得後、Read で以下を読み込む：
+
+1. `~/.claude/form-submit/field-log.json` — 未知フィールドの過去回答
+2. `${CLAUDE_SKILL_DIR}/docs/progress.json` — 前回の最終処理行
+3. `${CLAUDE_SKILL_DIR}/docs/error-log.json` — 過去の失敗履歴
+4. `${CLAUDE_SKILL_DIR}/docs/error-rules.json` — 自動スキップルール
+5. Playwright MCP 設定ファイルを Read し `--user-data-dir` の有無を確認。未設定なら「reCAPTCHA 通過率が下がりますが続行しますか？」と確認
 
 **progress.json が存在する場合:**
 ユーザーに選択肢を提示する：
@@ -88,6 +89,41 @@ Read で以下を読み込む：
 
 **progress.json が存在しない場合:**
 何行目から開始するかユーザーに直接聞く。
+
+#### 対話型セットアップ（config.json が存在しない場合）
+
+config.json が見つからない場合に以下を実行する。
+
+1. 「config.json が見つかりません。対話形式でセットアップを開始します。」と案内
+
+2. **必須項目を `AskUserQuestion` で順番に質問:**
+   - スプレッドシート URL（「企業リストの Google Spreadsheet URL を教えてください」）
+   - 会社名
+   - 氏名（フルネーム → 姓・名・フリガナ（カタカナ・ひらがな）を自動推定して確認）
+   - メールアドレス
+   - 電話番号
+   - お問い合わせ内容（デフォルト文面を提示し、カスタマイズするか聞く）
+
+3. **省略可能な項目をまとめて確認:**
+   - 「以下の項目も設定できます（後から追加可能）。今設定しますか？」
+   - 部署名、役職、会社URL、住所、郵便番号、お問い合わせ種別 等
+
+4. **スプレッドシート列構成はデフォルト値を提示して確認:**
+   - columns: A=企業名, B=送信済み, C=フォームURL
+   - sheet: 「シート1」
+   - 「この列構成でよいですか？ 異なる場合は教えてください」
+
+5. **options はデフォルト値を適用（質問不要）:**
+   - `confirmBeforeSubmit: true`
+   - `screenshotAfterSubmit: true`
+   - `skipOnError: true`
+   - `maxCompanies: 150`
+
+6. 収集した情報から config.json を生成し Write で保存:
+   - `mkdir -p ~/.claude/form-submit` でディレクトリ作成
+   - `~/.claude/form-submit/config.json` に Write
+
+7. 「セットアップ完了。フォーム送信を開始します。」と案内し、通常フローに続行
 
 ### Step 2: スプレッドシート遷移と Google ログイン確認
 

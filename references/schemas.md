@@ -36,7 +36,7 @@
     "お問い合わせ種別": "..."
   },
   "options": {
-    "confirmBeforeSubmit": false,
+    "confirmBeforeSubmit": true,
     "screenshotAfterSubmit": true,
     "skipOnError": true,
     "maxCompanies": 30,
@@ -69,7 +69,7 @@
 
 | フィールド | 型 | デフォルト | 説明 |
 |---|---|---|---|
-| `confirmBeforeSubmit` | boolean | `false` | 送信前に毎回確認するか |
+| `confirmBeforeSubmit` | boolean | `true` | 送信前に毎回確認するか |
 | `screenshotAfterSubmit` | boolean | `true` | 送信後にスクリーンショットを撮影するか |
 | `skipOnError` | boolean | `true` | エラー発生時にスキップして次の企業に進むか |
 | `maxCompanies` | number | `150` | 1 回の実行で処理する最大企業数 |

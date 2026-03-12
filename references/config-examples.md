@@ -72,7 +72,7 @@ spreadsheet と commonData の最低限の項目だけを定義した例。optio
 
 この構成では:
 - `sheet` が省略されているため `"シート1"` が使用される
-- `options` が省略されているため全てデフォルト値（`confirmBeforeSubmit: false`、`screenshotAfterSubmit: true`、`skipOnError: true`、`maxCompanies: 150`（テンプレートのデフォルト値））が適用される
+- `options` が省略されているため全てデフォルト値（`confirmBeforeSubmit: true`、`screenshotAfterSubmit: true`、`skipOnError: true`、`maxCompanies: 150`）が適用される
 
 ---
 
